@@ -2,8 +2,8 @@
 
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -16,47 +16,36 @@ function wallpaper_background() {
   background(255, 233, 166); //colour blue
 }
 
-function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  //Snowman
+function my_symbol(x,y) {
 
-  //hat
-  fill(247, 147, 184);
+  
+
+  fill(247, 147, 184);//hat
   noStroke();
   beginShape();
-  vertex(157.5, 123.25);
-  vertex(157.5, 142.75);
-  vertex(169.875, 136.375);
+  vertex(158, 123);
+  vertex(158, 143);
+  vertex(170, 137);
   endShape();
 
-  //ball on hay
-  fill(247, 147, 184);
-  ellipse(157, 123, 10,10)
+  
 
-  //higglight in eyes
-
-  fill(255);
-  ellipse(160, 122, 1, 2)
-
+  drawHeat(166, 145);
 
   
 
+  drawEye(164, 144);
+  drawEye(170, 142);
 
+  drawBall(157, 123);
 
+  drawHighlight(160, 122);
 
-  //bottom of the body
-  fill(255);
-  noStroke();
-  ellipse(166.875, 171.25, 37.5, 37.5);
-
-   //bottoms on body
-   fill(247, 147, 184);
-   noStroke();
-   ellipse(169, 160, 4,4 );
-   ellipse(169, 170, 4,4);
-   ellipse(169, 180, 4,4);
   
-  //bow tie
-  fill(247, 147, 184);
+
+  drawBody(167, 171);
+
+  fill(247, 147, 184);//tie
   noStroke();
   beginShape();
   vertex(160, 152);
@@ -68,230 +57,258 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(172, 156);
   vertex(173, 151);
   endShape();
+
+  drawBlush(164, 148);
+  drawBlush(172, 145);
+
+
+  fill(255, 177, 98);//nose
+  noStroke();
+  beginShape();
+  vertex(169, 145);
+  vertex(168, 148);
+  vertex(177, 146);
+  endShape();
+
+  drawBase(168, 146);
+
+  drawBottom(169, 160);
+  drawBottom(169, 170);
+  drawbottom(169, 180);
   
+  
+  
+}
+
+
+  function drawHat(x,y){
+  fill(247, 147, 184);//hat
+  noStroke();
+  beginShape();
+  vertex(x, y);
+  vertex(x, y);
+  vertex(x, y);
+  endShape();
+  }
+  
+  //ball on hat
+  function drawBall(x,y){
+  fill(247, 147, 184);
+  ellipse(x, y, 10,10);
+  }
+
+  //highlight in eyes
+  function drawHighlight(x,y){
+  fill(255);
+  ellipse(x, y, 1, 2);
+  }
+  
+  function drawBody(x,y){
+  fill(255);
+  noStroke();
+  ellipse(x, y, 38, 38);//bottom of the body
+  }
+
+   //bottoms on body
+   function drawBottom(x,y){
+   fill(247, 147, 184);
+   noStroke();
+   ellipse(x, y, 4,4);
+   ellipse(x, y, 4,4);
+   ellipse(x, y, 4,4);
+   }
+
+  //bow tie
+  function drawTie(x,y){
+  fill(247, 147, 184);
+  noStroke();
+  beginShape();
+  vertex(x, y);
+  vertex(x, y);
+  vertex(x, y);
+  endShape();
+  beginShape();
+  vertex(x, y);
+  vertex(x, y);
+  vertex(x, y);
+  endShape();
+  }
+
   //heat
+  function drawHeat(x,y){
   fill(255, 255, 255);
   noStroke();
-  ellipse(166.125, 145, 18.75, 18.75);
-  
+  ellipse(x, y, 19, 19);
+  }
+
   //eyes
+  function drawEye(x,y){
   fill(0, 0, 0);
   noStroke();
-  ellipse(163.5, 143.875, 1.5, 1.5);
-  ellipse(169.875, 142.375, 1.5, 1.5);
-  
+  ellipse(x, y, 1.5, 1.5);
+  ellipse(x, y, 1.5, 1.5);
+  }
+
+  function drawBlush(x,y){
   //blush
   fill(255, 185, 191);
   noStroke();
-  ellipse(163.875, 147.625, 4.875, 4.5);
-  ellipse(172.125, 145, 3.75, 3.75);
-  
+  ellipse(x, y, 4.9, 4.5);
+  ellipse(x, y, 3.8, 3.8);
+  }
+
   //nose
+  function drawNose(x,y){
   fill(255, 177, 98);
   noStroke();
   beginShape();
-  vertex(168.75, 145);
-  vertex(167.625, 147.625);
-  vertex(177.375, 146.125);
+  vertex(x, y);
+  vertex(x, y);
+  vertex(x, y);
   endShape();
+  }
   
-  ellipse(168, 146.125, 3, 3);
-  
-
-  
-
-  //penguin
-    noStroke();
-    //leg
-    stroke(50)
-    fill(255, 160, 45);
-    ellipse(25, 58, 11.11, 5.56);
-    ellipse(42, 58, 11.11, 5.56);
-
-    
-    //body
-    fill(0);
-    ellipse(18, 42, 7, 20);//左手 
-    ellipse(49, 42, 7, 20);//右手
-    ellipse(33.5, 40, 37, 40);//肚皮
-
-    //belly
-    noStroke()
-    fill(255);
-    ellipse(33,45,18,20)
-
-    //neck
-    fill(0)
-    ellipse(33,27,32,15)
-    
-
-    //heat
-    fill(35)
-    ellipse(33, 23, 30,31.5)
-
-  
-   
-    //eye
-    fill(255);
-    noStroke();
-    ellipse(28, 23,9, 15);//左眼
-    ellipse(39, 23, 9, 15);//右眼
-
-     //face
-     fill(255);
-     noStroke();
-     ellipse(33.33,27, 23, 10);
-
-     //blush
-     fill(255, 160, 45);
-     ellipse(27, 26, 6, 6);
-     ellipse(39, 26, 6, 6);
-    
-   
+  function drawBase(x,y){
+  ellipse(x, y, 3, 3);
 
 
+  //Penguin
 
-    //眼球
-    fill(0);
-    ellipse(28, 23, 2.8, 2.8);//左眼球
-    ellipse(38, 23, 2.8, 2.8);//右眼球
+drawLeg(25,58);
+drawLeg(42,58);
 
-     //highlight
-     fill(255);
-     ellipse(28.9, 23,1,1);
-     ellipse(38.9, 23,1,1);
+drawHand(18,42);
+drawHand(49,42);
 
-     
+drawBelly(33.5,40);
 
-    //mouse
-    
-    fill(255, 160, 45);
+drawNeck2(33,27);
 
-    ellipse(33, 23, 6, 4);
+drawHeat2(33, 23);
 
+drawEye2(28, 23);
+drawEye2(39, 23);
 
-    
+drawFace2(33.33,27);
 
-    
-    
-  
-     //Cat
-    
-     strokeWeight(0.9);
-
-     // body
-     stroke(86, 54, 33);
-     beginShape();
-     fill(0);
-     vertex(103, 126); // first point
-     bezierVertex(121, 126, 122.25, 128, 103, 95.75);
-     vertex(103, 126);
-     bezierVertex(85, 126, 86.25, 126, 103, 95.75);
-     endShape();
-     stroke(0);
-     line(103, 124.1, 103, 100);
-     
-     // ears
-     stroke(86, 54, 33);
-     beginShape();
-     vertex(83.4, 92); // first point
-     bezierVertex(75, 74, 73, 68, 95, 72);
-     endShape();
-     
-     beginShape();
-     vertex(122.6, 92); // first point
-     bezierVertex(131, 74, 133, 68, 111, 72);
-     endShape();
-     
-     stroke(86, 54, 33);
-     fill(192, 194, 97);
-     beginShape();
-     vertex(83.4, 92); // first point
-     bezierVertex(75, 74, 75, 68, 91, 78);
-     endShape();
-     
-     beginShape();
-     vertex(122.6, 92); // first point
-     bezierVertex(131, 74, 131, 68, 115, 78);
-     endShape();
-     
-     // 绘制头
-     stroke(86, 54, 33);
-     fill(0);
-     ellipse(103, 88, 40, 35);
-
-     
-     // eye
-     fill(253, 249, 202);
-     ellipse(93, 88, 19, 22);
-     ellipse(113, 88, 19, 22);
-     fill(0);
-     ellipse(93.4, 88, 9, 11);
-     ellipse(112.2, 88, 9, 11);
-
-     //highlight
-     fill(255);
-     noStroke()
-     ellipse(97, 89, 4, 4)
-     ellipse(116, 89, 4, 4)
-     
-     // mouse
-     fill(52, 119, 164);
-     triangle(100, 97, 105, 97, 103, 102);
-     
-     // paws
-     stroke(86, 54, 33);
-     fill(0);
-     beginShape();
-     vertex(103, 123.8);
-     bezierVertex(98, 125, 98, 120, 97, 111.5);
-     endShape();
-     line(103, 123.8, 103, 111.5);
-     
-     stroke(86, 54, 33);
-     fill(0);
-     beginShape();
-     vertex(103.4, 123);
-     bezierVertex(107, 127, 109, 123, 110, 111.5);
-     endShape();
-     line(103.45, 123.8, 103.5, 111.5);
-     
-     // tail
-     stroke(0);
-     triangle(82.6, 115, 88.1, 114.4, 85, 114.4);
-     triangle(82.8, 115.6, 89, 120.8, 88.2, 115.2);
-     triangle(90.2, 118, 88.44, 121.6, 88.2, 115.2);
-     stroke(86, 54, 33);
-     arc(85, 114.4, 6, 6, 2.51, 0);
-     
-     beginShape();
-     vertex(81.42, 115);
-     bezierVertex(82.6, 118, 84, 121, 89.6, 123);
-     endShape();
-     
-     fill(254, 224, 240);
-     stroke(86, 54, 33);
-     beginShape();
-     vertex(88.1, 114.4);
-     bezierVertex(88.12, 114.4, 89, 118, 91, 118);
-     endShape();
+drawBlush2(27, 26);
+drawBlush2(39, 26)
 
 
-//cat paw pattern
-fill(60)
+drawEyeball(28, 23);//左眼球
+drawEyeball(38, 23);
+
+drawHighlight2(28.9, 23);
+drawHighlight2(38.9, 23);
+
+drawMouse2(33, 23);
+
+
+drawBelly2(33,45);
+}
+
+
+noStroke();
+
+function drawLeg(x,y){
+//leg
+stroke(50)
+fill(255, 160, 45);
+ellipse(x, y, 11.11, 5.56);
+ellipse(x, y, 11.11, 5.56);
+}
+
+//body
+function drawHand(x,y){
+fill(0);
+ellipse(x, y, 7, 20);//左手 
+ellipse(x, y, 7, 20);//右手
+}
+
+function drawBelly(x,y){
+ellipse(x, y, 37, 40);//肚皮
+}
+
+//belly
+function drawBelly2(x,y){
 noStroke()
-ellipse(26, 180, 10, 10)
-ellipse(34, 180, 10, 10)
-ellipse(30, 175, 10, 10)
+fill(255);
+ellipse(x,y,18,20)
+}
+
+//neck
+function drawNeck2(x,y){
+fill(0)
+ellipse(x,y,32,15)
+}
+
+
+//heat
+function drawHeat2(x,y){
+fill(35)
+ellipse(x, y, 30,31.5)
+}
+
+
+//eye
+function drawEye2(x,y){
+fill(255);
+noStroke();
+ellipse(x, y,9, 15);//左眼
+ellipse(x, y, 9, 15);//右眼
+}
+
+function drawFace2(x,y){
+ //face
+ fill(255);
+ noStroke();
+ ellipse(x,y, 23, 10);
+}
+
+function drawBlush2(x,y){
+ //blush
+ fill(255, 160, 45);
+ ellipse(x, y, 6, 6);
+ ellipse(x, y, 6, 6);
+}
 
 
 
-ellipse(20, 170, 5, 10)
-ellipse(26, 164, 5, 10)
-ellipse(33, 164, 5, 10)
-ellipse(40, 170, 5, 10)
+
+//眼球
+function drawEyeball(x,y){
+fill(0);
+ellipse(x, y, 2.8, 2.8);//左眼球
+ellipse(x, y, 2.8, 2.8);//右眼球
+}
+
+function drawHighlight2(x,y){
+ //highlight
+ fill(255);
+ ellipse(x, y,1,1);
+ ellipse(x, y,1,1);
+}
+ 
+
+//mouse
+function drawMouse2(x,y){
+fill(255, 160, 45);
+ellipse(x, y, 6, 4);
+}
 
 
 
 
-}     
+
+
+
+
+
+
+
+
+
+
+
+
+
