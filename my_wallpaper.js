@@ -17,9 +17,9 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  //雪人
+  //Snowman
 
-  //帽子
+  //hat
   fill(247, 147, 184);
   noStroke();
   beginShape();
@@ -28,11 +28,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(169.875, 136.375);
   endShape();
 
-  //帽子上的球
+  //ball on hay
   fill(247, 147, 184);
   ellipse(157, 123, 10,10)
 
-  //高光
+  //higglight in eyes
 
   fill(255);
   ellipse(160, 122, 1, 2)
@@ -43,19 +43,19 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 
 
-  //下半身
+  //bottom of the body
   fill(255);
   noStroke();
   ellipse(166.875, 171.25, 37.5, 37.5);
 
-   //纽扣
+   //bottoms on body
    fill(247, 147, 184);
    noStroke();
    ellipse(169, 160, 4,4 );
    ellipse(169, 170, 4,4);
    ellipse(169, 180, 4,4);
   
-  //领结
+  //bow tie
   fill(247, 147, 184);
   noStroke();
   beginShape();
@@ -69,24 +69,24 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   vertex(173, 151);
   endShape();
   
-  //头
+  //heat
   fill(255, 255, 255);
   noStroke();
   ellipse(166.125, 145, 18.75, 18.75);
   
-  //眼睛
+  //eyes
   fill(0, 0, 0);
   noStroke();
   ellipse(163.5, 143.875, 1.5, 1.5);
   ellipse(169.875, 142.375, 1.5, 1.5);
   
-  //腮红
+  //blush
   fill(255, 185, 191);
   noStroke();
   ellipse(163.875, 147.625, 4.875, 4.5);
   ellipse(172.125, 145, 3.75, 3.75);
   
-  //鼻子
+  //nose
   fill(255, 177, 98);
   noStroke();
   beginShape();
@@ -99,55 +99,50 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   
 
   
-    
-  
-  
-  
-  
-  
-  //企鹅
+
+  //penguin
     noStroke();
-    //腿
+    //leg
     stroke(50)
     fill(255, 160, 45);
     ellipse(25, 58, 11.11, 5.56);
     ellipse(42, 58, 11.11, 5.56);
 
     
-    //身体
+    //body
     fill(0);
     ellipse(18, 42, 7, 20);//左手 
     ellipse(49, 42, 7, 20);//右手
     ellipse(33.5, 40, 37, 40);//肚皮
 
-    //肚子
+    //belly
     noStroke()
     fill(255);
     ellipse(33,45,18,20)
 
-    //脖子
+    //neck
     fill(0)
     ellipse(33,27,32,15)
     
 
-    //脑壳
+    //heat
     fill(35)
     ellipse(33, 23, 30,31.5)
 
   
    
-    //眼睛，肚皮
+    //eye
     fill(255);
     noStroke();
     ellipse(28, 23,9, 15);//左眼
     ellipse(39, 23, 9, 15);//右眼
 
-     //脸
+     //face
      fill(255);
      noStroke();
      ellipse(33.33,27, 23, 10);
 
-     //腮红
+     //blush
      fill(255, 160, 45);
      ellipse(27, 26, 6, 6);
      ellipse(39, 26, 6, 6);
@@ -161,14 +156,14 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     ellipse(28, 23, 2.8, 2.8);//左眼球
     ellipse(38, 23, 2.8, 2.8);//右眼球
 
-     //高光
+     //highlight
      fill(255);
      ellipse(28.9, 23,1,1);
      ellipse(38.9, 23,1,1);
 
      
 
-    //嘴巴
+    //mouse
     
     fill(255, 160, 45);
 
@@ -184,7 +179,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     
      strokeWeight(0.9);
 
-     // 绘制身体
+     // body
      stroke(86, 54, 33);
      beginShape();
      fill(0);
@@ -196,7 +191,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
      stroke(0);
      line(103, 124.1, 103, 100);
      
-     // 绘制耳朵
+     // ears
      stroke(86, 54, 33);
      beginShape();
      vertex(83.4, 92); // first point
@@ -226,7 +221,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
      ellipse(103, 88, 40, 35);
 
      
-     // 绘制眼睛
+     // eye
      fill(253, 249, 202);
      ellipse(93, 88, 19, 22);
      ellipse(113, 88, 19, 22);
@@ -234,17 +229,17 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
      ellipse(93.4, 88, 9, 11);
      ellipse(112.2, 88, 9, 11);
 
-     //高光
+     //highlight
      fill(255);
      noStroke()
      ellipse(97, 89, 4, 4)
      ellipse(116, 89, 4, 4)
      
-     // 绘制嘴
+     // mouse
      fill(52, 119, 164);
      triangle(100, 97, 105, 97, 103, 102);
      
-     // 绘制爪
+     // paws
      stroke(86, 54, 33);
      fill(0);
      beginShape();
@@ -261,7 +256,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
      endShape();
      line(103.45, 123.8, 103.5, 111.5);
      
-     // 绘制尾巴
+     // tail
      stroke(0);
      triangle(82.6, 115, 88.1, 114.4, 85, 114.4);
      triangle(82.8, 115.6, 89, 120.8, 88.2, 115.2);
@@ -282,7 +277,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
      endShape();
 
 
-//猫爪
+//cat paw pattern
 fill(60)
 noStroke()
 ellipse(26, 180, 10, 10)
