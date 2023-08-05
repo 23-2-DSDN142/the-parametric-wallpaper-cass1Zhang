@@ -3,8 +3,8 @@
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -13,7 +13,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(80, 150, 200); //colour blue
+  background(255, 233, 166); //colour blue
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -283,7 +283,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 
 //猫爪
-fill(255, 185, 191)
+fill(60)
 noStroke()
 ellipse(26, 180, 10, 10)
 ellipse(34, 180, 10, 10)
