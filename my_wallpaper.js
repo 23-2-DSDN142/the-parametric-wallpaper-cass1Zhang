@@ -1,31 +1,39 @@
 //your parameter variables go here!
 
+//var bodyColour = color(0);//255
+//var Paw1Colour = color(0)//255, 175, 15
+//var ballColour = color(255, 161, 66);//247, 147, 184
+//var mouseColour = color(52, 119, 164);//255
+
+var lineWidth = 30 //150
 //var detailColour = color(255, 177, 98); oringinal:(247, 147, 184)
 var EyeY = 23 //19 position 
 var HandY = 42 //50 position
 var PawSize = 12 //10 scale
 var eyeSize = 88 //92 position 
-var lineWidth = 50 //150
-
-
+var bodyX = 160//167
+var LegY = 58 //62
+var highY = 84//89
+let shouldDraw = true;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200
-  pWallpaper.grid_settings.cell_height = 200
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
 function wallpaper_background() {
   background(255, 233, 166); //colour blue
 
+ 
 }
 
-function my_symbol(x,y) {
+function my_symbol() {
 
   var detailColour = color(255, 177, 98);
  
@@ -48,13 +56,22 @@ function my_symbol(x,y) {
   drawEye(164, 144);
   drawEye(170, 142);
 
+  //ball
+  var ballColour = color(255, 161, 66);//247, 147, 184
+
+  //fill(255, 161, 66);
+
+  fill(ballColour);
   drawBall(157, 123);
+
+
+
 
   drawHighlight(160, 122);
 
   
 
-  drawBody(167, 171);
+  drawBody(bodyX, 171);
 
   fill(247, 147, 184);//tie
   noStroke();
@@ -85,7 +102,7 @@ function my_symbol(x,y) {
 
   drawBottom(169, 160);
   drawBottom(169, 170);
-  drawbottom(169, 180);
+  
   
   
   
@@ -102,9 +119,12 @@ function my_symbol(x,y) {
   endShape();
   }
   
+  
   //ball on hat
+
+  
+
   function drawBall(x,y){
-  fill(247, 147, 184);
   ellipse(x, y, 10,10);
   }
 
@@ -185,13 +205,21 @@ function my_symbol(x,y) {
 
   //Penguin
 
-drawLeg(25,58);
-drawLeg(42,58);
+  let shouldDrawLeg = true;
+  
+  if (shouldDrawLeg) {
+    drawLeg(100, 100);
+  }
+
+
+
+drawLeg(25,LegY);
+drawLeg(42,LegY);
 
 drawHand(18,HandY);
 drawHand(49,HandY);
 
-drawBelly(33.5,40);
+drawBelly(34,40);
 
 drawNeck2(33,27);
 
@@ -214,20 +242,35 @@ drawHighlight2(38.9, 23);
 
 drawMouse2(33, 23);
 
+//belly
+var Belly2Color = color(255);//255, 244, 92
 
+fill(Belly2Color);
 drawBelly2(33,45);
+
+
+}
+
+function drawLeg(x, y) {
+  
+
+  if (shouldDraw) {
+    //leg
+    let lineWidth = 1; // 
+    stroke(lineWidth);
+    fill(255, 160, 45);
+    ellipse(x - 6, y, 12, 6);
+    ellipse(x + 6 , y, 12, 6);
+  } else{
+    ellipse(x , y-12, 12, 6);
+    ellipse(x , y+12, 12, 6);
+
+
+  }
 }
 
 
-noStroke();
 
-function drawLeg(x,y){
-//leg
-stroke(lineWidth)
-fill(255, 160, 45);
-ellipse(x, y, 11.11, 5.56);
-ellipse(x, y, 11.11, 5.56);
-}
 
 //body
 function drawHand(x,y){
@@ -242,8 +285,6 @@ ellipse(x, y, 37, 40);//肚皮
 
 //belly
 function drawBelly2(x,y){
-noStroke()
-fill(255);
 ellipse(x,y,18,20)
 }
 
@@ -304,12 +345,15 @@ function drawMouse2(x,y){
 fill(255, 160, 45);
 ellipse(x, y, 6, 4);
 
-var bodyColour = color(255)
+
 
 //cat body
+var bodyColour = color(0);//255
+
 stroke(86, 54, 33);
 beginShape();
-fill(0);
+//fill(0);
+fill(bodyColour);
 vertex(103, 126); // first point
 bezierVertex(121, 126, 122, 128, 103, 96);
 vertex(103, 126);
@@ -332,6 +376,7 @@ stroke(86, 54, 33);
  bezierVertex(131, 74, 133, 68, 111, 72);
  endShape();
  
+
  stroke(86, 54, 33);
  fill(192, 194, 97);
  beginShape();
@@ -344,21 +389,28 @@ stroke(86, 54, 33);
  bezierVertex(131, 74, 131, 68, 115, 78);
  endShape();
 
+
+ 
 //heat
  drawheatCat(103,88);
 
 //eye
+
 draweyeCat(93, 88);
 draweyeCat(113, 88);
-draweyeCat(93.4, 88);
-draweyeCat(112.2, 88);
+draweyeCat(93, 88);
+draweyeCat(112, 88);
 
 //white highlight
-drawWhite(97, 89, 4, 4)
-drawWhite(116, 89, 4, 4)
+
+drawWhite(97, highY, 4, 4)
+drawWhite(116, highY, 4, 4)
 
 //mouse
-fill(52, 119, 164);
+
+var mouseColour = color(52, 119, 164);//255
+
+fill(mouseColour);
 triangle(100, 97, 105, 97, 103, 102);
 
 //leg
@@ -398,8 +450,11 @@ stroke(0);
  bezierVertex(88, 114, 89, 118, 91, 118);
  endShape();
 
+ var Paw1Colour = color(0)//255, 175, 15
 
-
+ //fill(0);
+ fill(Paw1Colour);
+ noStroke();
 drawPaw1(26,180);
 drawPaw1(34,180);
 drawPaw1(30,175);
@@ -413,8 +468,8 @@ drawPaw2(40,170);
 }
 //cat paw pattern
 function drawPaw1(x,y){
-fill(255, 175, 15)
-noStroke()
+
+noStroke();
 ellipse(x, y, PawSize, PawSize)
 ellipse(x, y, PawSize, PawSize)
 ellipse(x, y, PawSize, PawSize)
@@ -428,13 +483,9 @@ ellipse(x, y, 5, 10)
 
 }
 
-
-
-
-
  //Cat
     
- strokeWeight(0.9);
+ 
 
  // body
  function drawBody3(x,y){
@@ -474,7 +525,13 @@ ellipse(x, y, 5, 10)
  vertex(x, y); // first point
  bezierVertex(131, 74, 131, 68, 115, 78);
  endShape();
+
+
+
+
+ 
  }
+
 
  // 绘制头
  function drawheatCat(x,y){
@@ -503,7 +560,6 @@ ellipse(x, y, 5, 10)
 
  // mouse
  function drawmouse(x,y){
- fill(52, 119, 164);
  triangle(100, 97, 105, 97, 103, 102);
  }
 
@@ -553,6 +609,7 @@ ellipse(x, y, 5, 10)
 
  
  
+
 
 
 
