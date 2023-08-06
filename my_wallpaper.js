@@ -1,26 +1,37 @@
 //your parameter variables go here!
 
+//var detailColour = color(255, 177, 98); oringinal:(247, 147, 184)
+var EyeY = 23 //19 position 
+var HandY = 42 //50 position
+var PawSize = 12 //10 scale
+var eyeSize = 88 //92 position 
+var lineWidth = 50 //150
+
+
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 200;
-  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.cell_width  = 200
+  pWallpaper.grid_settings.cell_height = 200
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
 function wallpaper_background() {
   background(255, 233, 166); //colour blue
+
 }
 
 function my_symbol(x,y) {
 
-  
+  var detailColour = color(255, 177, 98);
+ 
 
-  fill(247, 147, 184);//hat
+  //fill(247, 147, 184);//hat
+  fill(detailColour);
   noStroke();
   beginShape();
   vertex(158, 123);
@@ -177,8 +188,8 @@ function my_symbol(x,y) {
 drawLeg(25,58);
 drawLeg(42,58);
 
-drawHand(18,42);
-drawHand(49,42);
+drawHand(18,HandY);
+drawHand(49,HandY);
 
 drawBelly(33.5,40);
 
@@ -186,8 +197,8 @@ drawNeck2(33,27);
 
 drawHeat2(33, 23);
 
-drawEye2(28, 23);
-drawEye2(39, 23);
+drawEye2(28, EyeY);
+drawEye2(39, EyeY);
 
 drawFace2(33.33,27);
 
@@ -212,7 +223,7 @@ noStroke();
 
 function drawLeg(x,y){
 //leg
-stroke(50)
+stroke(lineWidth)
 fill(255, 160, 45);
 ellipse(x, y, 11.11, 5.56);
 ellipse(x, y, 11.11, 5.56);
@@ -273,8 +284,6 @@ function drawBlush2(x,y){
 }
 
 
-
-
 //眼球
 function drawEyeball(x,y){
 fill(0);
@@ -294,17 +303,256 @@ function drawHighlight2(x,y){
 function drawMouse2(x,y){
 fill(255, 160, 45);
 ellipse(x, y, 6, 4);
+
+var bodyColour = color(255)
+
+//cat body
+stroke(86, 54, 33);
+beginShape();
+fill(0);
+vertex(103, 126); // first point
+bezierVertex(121, 126, 122, 128, 103, 96);
+vertex(103, 126);
+bezierVertex(85, 126,86, 126, 103, 96);
+endShape();
+stroke(0);
+line(103, 124, 103, 100);
+
+
+
+//ear
+stroke(86, 54, 33);
+ beginShape();
+ vertex(83, 92); // first point
+ bezierVertex(75, 74, 73, 68, 95, 72);
+ endShape();
+ 
+ beginShape();
+ vertex(123, 92); // first point
+ bezierVertex(131, 74, 133, 68, 111, 72);
+ endShape();
+ 
+ stroke(86, 54, 33);
+ fill(192, 194, 97);
+ beginShape();
+ vertex(83, 92); // first point
+ bezierVertex(75, 74, 75, 68, 91, 78);
+ endShape();
+ 
+ beginShape();
+ vertex(122.6, 92); // first point
+ bezierVertex(131, 74, 131, 68, 115, 78);
+ endShape();
+
+//heat
+ drawheatCat(103,88);
+
+//eye
+draweyeCat(93, 88);
+draweyeCat(113, 88);
+draweyeCat(93.4, 88);
+draweyeCat(112.2, 88);
+
+//white highlight
+drawWhite(97, 89, 4, 4)
+drawWhite(116, 89, 4, 4)
+
+//mouse
+fill(52, 119, 164);
+triangle(100, 97, 105, 97, 103, 102);
+
+//leg
+stroke(86, 54, 33);
+fill(0);
+beginShape();
+vertex(103, 124);
+bezierVertex(98, 125, 98, 120, 97, 112);
+endShape();
+line(103, 124, 103, 112);
+
+stroke(86, 54, 33);
+fill(0);
+beginShape();
+vertex(103, 123);
+bezierVertex(107, 127, 109, 123, 110, 112);
+endShape();
+line(103, 124, 104, 112);
+
+//tail
+stroke(0);
+ triangle(82, 115, 88, 114, 85, 114);
+ triangle(82, 116, 89, 121, 88, 115);
+ triangle(90.5, 118, 90, 122, 88, 115);
+ stroke(86, 54, 33);
+ arc(84, 114, 6, 6, 3, 0);
+ 
+ beginShape();
+ vertex(81, 115);
+ bezierVertex(83, 118, 84, 121, 90, 123);
+ endShape();
+ 
+ fill(254, 224, 240);
+ stroke(86, 54, 33);
+ beginShape();
+ vertex(88.1, 114.4);
+ bezierVertex(88, 114, 89, 118, 91, 118);
+ endShape();
+
+
+
+drawPaw1(26,180);
+drawPaw1(34,180);
+drawPaw1(30,175);
+
+drawPaw2(20,170);
+drawPaw2(26,164);
+drawPaw2(33,164);
+drawPaw2(40,170);
+
+
+}
+//cat paw pattern
+function drawPaw1(x,y){
+fill(255, 175, 15)
+noStroke()
+ellipse(x, y, PawSize, PawSize)
+ellipse(x, y, PawSize, PawSize)
+ellipse(x, y, PawSize, PawSize)
+}
+
+function drawPaw2(x,y){
+ellipse(x, y, 5, 10)
+ellipse(x, y, 5, 10)
+ellipse(x, y, 5, 10)
+ellipse(x, y, 5, 10)
+
 }
 
 
 
 
 
+ //Cat
+    
+ strokeWeight(0.9);
+
+ // body
+ function drawBody3(x,y){
+ stroke(86, 54, 33);
+ beginShape();
+ fill(0);
+ vertex(x, y); // first point
+ bezierVertex(121, 126, 122, 128, 103, 96);
+ vertex(x, y);
+ bezierVertex(85, 126,86, 126, 103, 96);
+ endShape();
+ stroke(0);
+ line(103, 124, 103, 100);
+ }
+
+ // ears
+ function drawEars(x,y){
+ stroke(86, 54, 33);
+ beginShape();
+ vertex(x, y); // first point
+ bezierVertex(75, 74, 73, 68, 95, 72);
+ endShape();
+ 
+ beginShape();
+ vertex(x, y); // first point
+ bezierVertex(131, 74, 133, 68, 111, 72);
+ endShape();
+ 
+ stroke(86, 54, 33);
+ fill(192, 194, 97);
+ beginShape();
+ vertex(x, y); // first point
+ bezierVertex(75, 74, 75, 68, 91, 78);
+ endShape();
+ 
+ beginShape();
+ vertex(x, y); // first point
+ bezierVertex(131, 74, 131, 68, 115, 78);
+ endShape();
+ }
+
+ // 绘制头
+ function drawheatCat(x,y){
+ stroke(86, 54, 33);
+ fill(0);
+ ellipse(x, y, 40, 35);
+ }
+ 
+ // eye
+ function draweyeCat(x,y){
+ fill(253, 249, 202);
+ ellipse(93, eyeSize, 19, 22);
+ ellipse(113, eyeSize, 19, 22);
+ fill(0);
+ ellipse(93.4, eyeSize, 9, 11);
+ ellipse(112.2, eyeSize, 9, 11);
+ }
+
+ //highlight
+ function drawWhite(x,y){
+ fill(255);
+ noStroke()
+ ellipse(x, y, 4, 4)
+ ellipse(x, y, 4, 4)
+ }
+
+ // mouse
+ function drawmouse(x,y){
+ fill(52, 119, 164);
+ triangle(100, 97, 105, 97, 103, 102);
+ }
+
+ // legs
+ function drawlegs(x,y){
+ stroke(86, 54, 33);
+ fill(0);
+ beginShape();
+ vertex(x, y);
+ bezierVertex(98, 125, 98, 120, 97, 112);
+ endShape();
+ line(103, 124, 103, 112);
+ 
+ stroke(86, 54, 33);
+ fill(0);
+ beginShape();
+ vertex(x, y);
+ bezierVertex(107, 127, 109, 123, 110, 112);
+ endShape();
+ line(103, 124, 104, 112);
+ }
+
+ // tail
+ function drawtail(x,y){
+ stroke(0);
+ triangle(82, 115, 88, 114, 85, 114);
+ triangle(82, 116, 89, 121, 88, 115);
+ triangle(90.5, 118, 90, 122, 88, 115);
+ stroke(86, 54, 33);
+ arc(84, 114, 6, 6, 3, 0);
+ 
+ beginShape();
+ vertex(x, y);
+ bezierVertex(83, 118, 84, 121, 90, 123);
+ endShape();
+ 
+ fill(254, 224, 240);
+ stroke(86, 54, 33);
+ beginShape();
+ vertex(x, y);
+ bezierVertex(88, 114, 89, 118, 91, 118);
+ endShape();
+ }
 
 
 
 
-
+ 
+ 
 
 
 
