@@ -1,33 +1,33 @@
 //your parameter variables go here!
 
-var cellWidth = 160;
-var cellHeight = 190;
+var cellWidth = 200;
+var cellHeight = 200;
 let shouldDraw = false;
 
 
-var EyeY = 19 //19 position 
-var HandY = 20 //50 position
-var PawSize = 14 //10 scale
-var eyeSize = 92 //92 position 
-var bodyX = 167//167
-var LegY = 57 //62
-var highY = 93//89 //position of the eye highlight
+var EyeY = 24 //19 posi
+var HandY = 42 //50 posi
+var PawSize = 12 //10 scale
+var eyeSize = 88 //92 posi
+var bodyX = 160//167 posi
+var LegY = 57 //62 posi
+var highY = 84//89 //position of the eye highlight //position
 
 
-var blushSize = 5; //6
-var EyeX = 10
-var BodySize = 167
-var EyeY2 = 20
+var blushSize = 4; //6 scale
+var EyeX = 9
+var BodySize = 166
+var EyeY2 = 10
 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.resolution(A3);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = cellWidth;
-  pWallpaper.grid_settings.cell_height = cellHeight;
+  pWallpaper.grid_settings.cell_width  = 200;
+  pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
