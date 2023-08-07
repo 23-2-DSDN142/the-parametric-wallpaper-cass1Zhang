@@ -38,12 +38,8 @@ function wallpaper_background() {
 }
 
 function my_symbol() {
-  
-  var snowHatColour = color(247, 147, 184);
-  var ballColour = color(247, 147, 184);
-
   //fill(247, 147, 184);//hat
-  fill(snowHatColour);
+  fill(247, 147, 184);
   noStroke();
   beginShape();
   vertex(158, 123);
@@ -52,28 +48,18 @@ function my_symbol() {
   endShape();
 
   
-
   drawHeat(166, 145);
-
-  
 
   drawEye(164, 144);
   drawEye(170, 142);
-
-  //ball
  
 
   //fill(255, 161, 66);
 
-  fill(ballColour);
+  fill(247, 147, 184);
   drawBall(157, 123);
 
-
-
-
   drawHighlight(160, 122);
-
-  
 
   drawBody(bodyX, BodySize);
 
@@ -108,8 +94,6 @@ function my_symbol() {
   drawBottom(169, 170);
   
   
-  
-  
 }
 
 
@@ -125,9 +109,6 @@ function my_symbol() {
   
   
   //ball on hat
-
-  
-
   function drawBall(x,y){
   ellipse(x, y, 10,10);
   }
@@ -238,7 +219,7 @@ drawBlush2(blushSize,blushSize);
 drawBlush2(blushSize,blushSize)
 
 
-drawEyeball(28, 23);//左眼球
+drawEyeball(28, 23);//left eyeball
 drawEyeball(38, 23);
 
 drawHighlight2(28.9, 23);
@@ -247,8 +228,6 @@ drawHighlight2(38.9, 23);
 drawMouse2(33, 23);
 
 //belly
-
-
 fill(255);
 drawBelly2(33,45);
 
@@ -279,12 +258,12 @@ function drawLeg(x, y) {
 //body
 function drawHand(x,y){
 fill(0);
-ellipse(x, y, 7, 20);//左手 
-ellipse(x, y, 7, 20);//右手
+ellipse(x, y, 7, 20);//left hand
+ellipse(x, y, 7, 20);//right hand
 }
 
 function drawBelly(x,y){
-ellipse(x, y, 37, 40);//肚皮
+ellipse(x, y, 37, 40);//belly
 }
 
 //belly
@@ -310,8 +289,8 @@ ellipse(x, y, 30,31.5)
 function drawEye2(x,y){
 fill(255);
 noStroke();
-ellipse(x, y,9, 15);//左眼
-ellipse(x, y, 9, 15);//右眼
+ellipse(x, y,9, 15);//left eye
+ellipse(x, y, 9, 15);//right eye
 }
 
 function drawFace2(x,y){
@@ -329,11 +308,11 @@ function drawBlush2(x,y){
 }
 
 
-//眼球
+//eyeball
 function drawEyeball(x,y){
 fill(0);
-ellipse(x, y, 2.8, 2.8);//左眼球
-ellipse(x, y, 2.8, 2.8);//右眼球
+ellipse(x, y, 2.8, 2.8);//left
+ellipse(x, y, 2.8, 2.8);//right
 }
 
 function drawHighlight2(x,y){
@@ -351,9 +330,8 @@ ellipse(x, y, 6, 4);
 
 
 
-//cat body
-
-
+//cat //////////
+//body
 stroke(86, 54, 33);
 beginShape();
 //fill(0);
@@ -406,19 +384,15 @@ draweyeCat(30, 88);
 draweyeCat(30, 88);
 
 fill(0);
- ellipse(93, eyeSize, EyeX, EyeY2);
- ellipse(112.2, eyeSize, EyeX, EyeY2);
+ellipse(93, eyeSize, EyeX, EyeY2);
+ellipse(112.2, eyeSize, EyeX, EyeY2);
 
 
 //white highlight
-
 drawWhite(97, highY, 4, 4)
 drawWhite(116, highY, 4, 4)
 
 //mouse
-
-
-
 fill(255);
 triangle(100, 97, 105, 97, 103, 102);
 
@@ -461,9 +435,9 @@ stroke(0);
 
  
 
- //fill(0);
- fill(0);
- noStroke();
+ //fill(255);
+fill(0);
+noStroke();
 drawPaw1(26,180);
 drawPaw1(34,180);
 drawPaw1(30,175);
@@ -542,7 +516,7 @@ ellipse(x, y, 5, 10)
  }
 
 
- // 绘制头
+ // heat
  function drawheatCat(x,y){
  stroke(86, 54, 33);
  fill(0);
