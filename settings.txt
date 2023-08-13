@@ -8,14 +8,25 @@ Your final settings.txt will look something like this when you are finished:
 
 Wallpaper 1:
 
-//your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+var cellWidth = 200;
+var cellHeight = 200;
+let shouldDraw = false;
+
+
+var EyeY = 24 //19 posi
+var HandY = 42 //50 posi
+var PawSize = 12 //10 scale
+var eyeSize = 88 //92 posi
+var bodyX = 160//167 posi
+var LegY = 57 //62 posi
+var highY = 84//89 //position of the eye highlight //position
+
+
+var blushSize = 4; //6 scale
+var EyeX = 9
+var BodySize = 166
+var EyeY2 = 10
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -23,23 +34,75 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
+  pWallpaper.grid_settings.cell_width  = cellWidth;
+  pWallpaper.grid_settings.cell_height = cellHeight;
   pWallpaper.grid_settings.row_offset  = 50;
 }
 
+
 /////////////////////////////////
+
+
 
 Wallpaper 2:
 
-//your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+var cellWidth = 180;
+var cellHeight = 200;
+let shouldDraw = false;
+
+
+var EyeY = 17 //19 position 
+var HandY = 20 //50 position
+var PawSize = 10 //10 scale
+var eyeSize = 80 //92 position 
+var bodyX = 160//167
+var LegY = 58 //62
+var highY = 80//89 //position of the eye highlight
+
+
+var blushSize = 10; //6
+var EyeX = 4
+var BodySize = 166
+var EyeY2 = 10
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellWidth;
+  pWallpaper.grid_settings.cell_height = cellHeight;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+
+
+
+
+/////////////////////////////////
+
+Wallpaper 3:
+var cellWidth = 290;
+var cellHeight = 200;
+let shouldDraw = false;
+
+
+var EyeY = 17 //19 position 
+var HandY = 20 //50 position
+var PawSize = 7 //10 scale
+var eyeSize = 80 //92 position 
+var bodyX = 160//167
+var LegY = 58 //62
+var highY = 80//89 //position of the eye highlight
+
+
+var blushSize = 10; //6
+var EyeX = 20
+var BodySize = 163
+var EyeY2 = 10
+
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -47,7 +110,250 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width  = cellWidth;
+  pWallpaper.grid_settings.cell_height = cellHeight;
+  pWallpaper.grid_settings.row_offset  = 50;
 }
+
+
+
+/////////////////////////////////
+
+
+Wallpaper 4:
+var cellWidth = 180;
+var cellHeight = 250;
+let shouldDraw = false;
+
+
+var EyeY = 40 //19 position 
+var HandY = 40 //50 position
+var PawSize = 15 //10 scale
+var eyeSize = 92 //92 position 
+var bodyX = 167//167
+var LegY = 57 //62
+var highY = 89//89 //position of the eye highlight
+
+
+var blushSize = 5; //6
+var EyeX = 18
+var BodySize = 166
+var EyeY2 = 20
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellWidth;
+  pWallpaper.grid_settings.cell_height = cellHeight;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+
+
+
+
+
+/////////////////////////////////
+
+
+Wallpaper 5:
+var cellWidth = 200;
+var cellHeight = 250;
+let shouldDraw = true;
+
+
+var EyeY = 17 //19 position 
+var HandY = 45 //50 position
+var PawSize = 8 //10 scale
+var eyeSize = 96 //92 position 
+var bodyX = 167//167
+var LegY = 57 //62
+var highY = 93//89 //position of the eye highlight
+
+
+var blushSize = 5; //6
+var EyeX = 10
+var BodySize = 167
+var EyeY2 = 20
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellWidth;
+  pWallpaper.grid_settings.cell_height = cellHeight;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+
+
+
+
+
+
+
+
+/////////////////////////////////
+
+
+Wallpaper 6:
+
+var cellWidth = 160;
+var cellHeight = 190;
+let shouldDraw = false;
+
+
+var EyeY = 19 //19 position 
+var HandY = 20 //50 position
+var PawSize = 14 //10 scale
+var eyeSize = 92 //92 position 
+var bodyX = 167//167
+var LegY = 57 //62
+var highY = 93//89 //position of the eye highlight
+
+
+var blushSize = 5; //6
+var EyeX = 10
+var BodySize = 167
+var EyeY2 = 20
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellWidth;
+  pWallpaper.grid_settings.cell_height = cellHeight;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+
+
+
+
+
+
+
+/////////////////////////////////
+
+Wallpaper 7:
+var cellWidth = 150;
+var cellHeight = 240;
+let shouldDraw = true;
+
+
+var EyeY = 19 //19 position 
+var HandY = 55 //50 position
+var PawSize = 7 //10 scale
+var eyeSize = 80 //92 position 
+var bodyX = 155//167
+var LegY = 57 //62
+var highY = 75//89 //position of the eye highlight
+
+
+var blushSize = 5; //6
+var EyeX = 15
+var BodySize = 166
+var EyeY = 20
+
+
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellWidth;
+  pWallpaper.grid_settings.cell_height = cellHeight;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+
+/////////////////////////////////
+
+
+Wallpaper 8:
+var cellWidth = 200;
+var cellHeight = 150;
+let shouldDraw = false;
+
+
+var EyeY = 18; //19 position 
+var HandY = 20; //50 position
+var PawSize = 7; //10 scale
+var eyeSize = 80; //92 position 
+var bodyX = 155;//167
+var LegY = 57;//62
+var highY = 75;//89 //position of the eye highlight
+
+
+var blushSize = 3; //6
+var EyeX =10
+var BodySize = 170
+var EyeY2 = 12
+
+
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GLIDE_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellWidth;
+  pWallpaper.grid_settings.cell_height = cellHeight;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+
+
+
+/////////////////////////////////
+
+
+Wallpaper 9:
+var cellWidth = 150;
+var cellHeight = 150;
+let shouldDraw = false;
+
+
+var EyeY = 28; //19 position 
+var HandY = 49; //50 position
+var PawSize = 7; //10 scale
+var eyeSize = 80; //92 position 
+var bodyX = 180;//167
+var LegY = 57;//62
+var highY = 80;//89 //position of the eye highlight
+
+
+var blushSize = 3; //6
+var EyeX = 4
+var BodySize = 166
+var EyeY2 = 20
+
+
+
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width  = cellWidth;
+  pWallpaper.grid_settings.cell_height = cellHeight;
+  pWallpaper.grid_settings.row_offset  = 50;
+}
+
+
+/////////////////////////////////
